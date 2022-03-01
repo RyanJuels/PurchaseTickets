@@ -1,2 +1,10 @@
 /bin/
 /target/
+
+# Compiled class file
+*.class
+
+# Eclipse
+.project
+
+*/META-INF/*
