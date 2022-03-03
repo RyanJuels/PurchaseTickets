@@ -5,12 +5,27 @@
  */
 package main.java.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tickets")
 public class Tickets {
 	
+	@Id
+	@GeneratedValue
+	@Column(name="ID")
 	int id;
+	@Column(name="FIRSTNAME")
 	String firstName;
+	@Column(name="LASTNAME")
 	String lastName;
+	@Column(name="NUMTICKETS")
 	int numTickets;
+	@Column(name="EMAIL")
 	String email;
 	
 	public Tickets() {
