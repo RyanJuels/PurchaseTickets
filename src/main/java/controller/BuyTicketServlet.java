@@ -31,10 +31,11 @@ public class BuyTicketServlet extends HttpServlet {
 		String fName = request.getParameter("fname");
 		String lName = request.getParameter("lname");
 		String email = request.getParameter("email");
-		int numTickets = Integer.parseInt(request.getParameter("tickets"));
+		Integer numTickets = Integer.parseInt(request.getParameter("tickets"));
 		Tickets ticket = new Tickets(fName, lName, email, numTickets);
 		PurchaseTicketHelper pth = new PurchaseTicketHelper();
 		pth.insertTickets(ticket);
+		
 		getServletContext().getRequestDispatcher("/index.html").forward(request, response);
 	}
 
