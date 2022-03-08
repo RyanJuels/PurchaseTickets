@@ -5,6 +5,7 @@
 *.class
 
 # Eclipse
+.settings/
 .project
 
 */META-INF/*
